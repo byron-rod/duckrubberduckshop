@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Spring Sale Collections",
+    title: "Summer Sale Collections",
     description: "Sale! Up to 50% off!",
     img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "/",
@@ -24,7 +24,7 @@ const slides = [
   {
     id: 3,
     title: "New Jacket Collections",
-    description: "Get ready for winter",
+    description: "Get ready for fall",
     img: "/cover1.jpg",
     url: "/",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
@@ -34,13 +34,13 @@ const slides = [
 const Slider = () => {
   const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 8000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  //   }, 20000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const formatTitle = (title: string) => {
     const words = title.split(" ");
@@ -53,7 +53,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden">
+    <div className="h-[calc(100vh-96px)] overflow-hidden">
       <div
         className="w-max h-full flex transition-all ease-in-out duration-1000"
         style={{ transform: `translateX(-${current * 100}vw)` }}
@@ -93,14 +93,14 @@ const Slider = () => {
       <div className="absolute m-auto left-1/2 bottom-8 flex gap-4">
         {slides.map((slide, index) => (
           <div
-            className={`w-3 h-3  rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${
+            className={`w-4 h-4  rounded-full ring-1 ring-gray-900 cursor-pointer flex items-center justify-center ${
               current === index ? "scale-150" : ""
             }`}
             key={slide.id}
             onClick={() => setCurrent(index)}
           >
             {current === index && (
-              <div className="w-[6px] h-[6px] bg-gray-600 rounded-full"></div>
+              <div className="w-[8px] h-[8px] bg-gray-900 rounded-full"></div>
             )}
           </div>
         ))}

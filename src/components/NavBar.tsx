@@ -6,7 +6,7 @@ import NavIcons from "./NavIcons";
 
 const NavBar = () => {
   return (
-    <nav className="h-20 px-8 md:px-12 lg:px-16 xl:px-32 2xl:px-64 relative pt-4 pb-3 mb-4 z-20">
+    <nav className="h-[6rem] px-8 md:px-12 lg:px-16 xl:px-32 2xl:px-64 relative pt-4 pb-4 z-20 border-b-2 border-black">
       {/* mobile menu */}
       <div className="h-full flex items-center justify-between md:hidden">
         <Link href="/">
