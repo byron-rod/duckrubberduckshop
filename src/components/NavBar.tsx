@@ -17,7 +17,8 @@ const NavBar = () => {
             height={120}
             className="z-20"
             priority
-          ></Image>
+            style={{ width: "auto", height: "auto" }}
+          />
         </Link>
         <Menu />
       </div>
@@ -32,7 +33,8 @@ const NavBar = () => {
               width={120}
               height={120}
               className="z-20"
-            ></Image>
+              style={{ width: "auto", height: "auto" }}
+            />
           </Link>
           <div className="hidden xl:flex gap-4">
             <Link href="/">Home</Link>
