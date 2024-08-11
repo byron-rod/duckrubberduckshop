@@ -9,3 +9,15 @@
 .scrollbar-hide {
   scrollbar-width: none;
 }
+
+.image-auto {
+  width: auto;
+  height: auto;
+}
+
+@layer base {
+  img {
+    width: auto;
+    height: auto;
+  }
+}

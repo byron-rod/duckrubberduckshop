@@ -13,8 +13,8 @@ const NavBar = () => {
           <Image
             src="/ducklogo.png"
             alt="Duck Logo"
-            width={120}
-            height={120}
+            width={150}
+            height={150}
             className="z-20"
             priority
             style={{ width: "auto", height: "auto" }}
@@ -32,8 +32,9 @@ const NavBar = () => {
               alt="Duck Logo"
               width={120}
               height={120}
-              className="z-20"
-              style={{ width: "auto", height: "auto" }}
+              className="z-20 image-auto img"
+              priority
+              style={{ width: "120", height: "120" }}
             />
           </Link>
           <div className="hidden xl:flex gap-4">
