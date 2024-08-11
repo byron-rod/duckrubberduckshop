@@ -32,17 +32,13 @@ const Filter = () => {
 
         {/* TODO: Filter Categories */}
         <select
-          name="category"
+          name="cat"
           className="py-2 px-4 rounded-2xl text-sm font-medium bg-yellow-100"
           onChange={handleFilterChange}
         >
-          <option value="">Category</option>
-          <option value="home">Home</option>
-          <option value="new-arrivals">New Arrivals</option>
-          <option value="shoes">Shoes</option>
-          <option value="t-shirts">T-shirts</option>
-          <option value="accessories">Accessories</option>
-          <option value="featured">Featured</option>
+          <option>Category</option>
+          <option value="">New Arrival</option>
+          <option value="">Popular</option>
         </select>
         <select
           name=""

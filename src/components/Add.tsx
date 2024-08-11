@@ -13,13 +13,11 @@ const Add = ({
 }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const stock = 4;
-
   const handleQuantity = (type: "i" | "d") => {
     if (type === "d" && quantity > 1) {
       setQuantity((prev) => prev - 1);
     }
-    if (type === "i" && quantity < stock) {
+    if (type === "i" && quantity < stockNumber) {
       setQuantity((prev) => prev + 1);
     }
   };
@@ -45,8 +43,8 @@ const Add = ({
             </button>
           </div>
           <div className="text-sm">
-            Only <span className="text-orange-600">4 items</span> left! <br />{" "}
-            {"Don't"} miss it
+            Only <span className="text-orange-600">{stockNumber} items</span>{" "}
+            left! <br /> {"Don't"} miss it
           </div>
         </div>
         <button className="w-36 text-sm rounded-3xl ring-1 ring-yellow-500 text-black font-medium py-2 px-4 hover:bg-yellow-500 disabled:cursor-not-allowed disabled:bg-pink-200 disabled:text-gray-300 disabled:ring-none">
